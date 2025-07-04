@@ -71,3 +71,33 @@ After pasting this content into your `README.md`, click **“Commit changes”**
 
 Once you've uploaded your files and finished this, tell me — and I’ll do a final checklist review for submission!
 Add complete README with model explanations and architecture
+demand = a*(occupancy/capacity) + b*queue_length - c*traffic_level + d*is_special_day + e*vehicle_type_weight
+
+price = base_price * (1 + λ * normalized_demand)
+if avg_nearby < demand_price:
+    price = max(avg_nearby - 1, 5)
+else:
+    price = min(demand_price + 0.5, 20)
+flowchart LR
+    A[CSV: modified_dataset.csv]
+    B[Replay CSV Stream via Pathway]
+    C[Add Timestamp Columns]
+    D[Tumbling Window Aggregates (Daily)]
+    E1[Model 1 Logic]
+    E2[Model 2 Logic]
+    E3[Model 3 Logic]
+    F1[Bokeh Plot 1]
+    F2[Bokeh Plot 2]
+    F3[Bokeh Plot 3]
+
+    A --> B --> C --> D --> E1 --> F1
+                      D --> E2 --> F2
+                      D --> E3 --> F3
+
+---
+
+### ✅ Next Step:
+- Copy this entire block into your `README.md` on GitHub.
+- Replace image links if you're renaming PNGs.
+- Push your final `dynamic_pricing.ipynb`, dataset, and report if not done already.
+- Let me know when it's uploaded, and I’ll verify everything for **final submission review**.
